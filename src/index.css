@@ -13,4 +13,14 @@
 
 body {
   margin: 0;
+  background: #000;
+  overflow-x: hidden;
+}
+
+html {
+  background: #000;
+}
+
+#root {
+  background: #000;
 }

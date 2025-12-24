@@ -8,6 +8,7 @@
 .home {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh;
   width: 100%;
   display: grid;
   place-items: center;
@@ -27,7 +28,9 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 2rem;
+  width: 100%;
+  max-width: min(44rem, 92vw);
+  padding: clamp(1.25rem, 5vw, 2.5rem);
   color: #fff;
 }
 
@@ -35,8 +38,30 @@
   margin: 0;
   font-weight: 900;
   font-size: clamp(3.25rem, 12vw, 8.25rem);
-  letter-spacing: 0.08em;
+  letter-spacing: clamp(0.02em, 0.6vw, 0.08em);
   line-height: 0.95;
+}
+
+@media (max-width: 420px) {
+  .homeLogo {
+    font-size: clamp(2.5rem, 13.6vw, 3.4rem);
+    letter-spacing: 0.02em;
+  }
+
+  .homeSubtitle {
+    margin-top: 0.75rem;
+  }
+
+  .homeComingSoon {
+    letter-spacing: 0.12em;
+  }
+}
+
+@media (max-width: 380px) {
+  .homeLogo {
+    font-size: clamp(2.35rem, 13.2vw, 3.15rem);
+    letter-spacing: 0.015em;
+  }
 }
 
 .homeSubtitle {
